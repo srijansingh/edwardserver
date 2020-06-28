@@ -15,7 +15,7 @@ exports.insertGallery = (req, res, next) => {
 
     list.save()
     .then(result => {
-        res.status(200).josn({
+        res.status(200).json({
             data:result
         })
     })
@@ -53,7 +53,7 @@ exports.insertBlog = (req, res, next) => {
 
     list.save()
     .then(result => {
-        res.status(200).josn({
+        res.status(200).json({
             data:result
         })
     })
