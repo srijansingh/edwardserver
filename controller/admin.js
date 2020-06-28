@@ -19,12 +19,7 @@ exports.insertGallery = (req, res, next) => {
             data:result
         })
     })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({
-            error:err
-        })
-    })
+    
 }
 
 exports.getGallery = (req, res, next) => {
@@ -62,12 +57,7 @@ exports.insertBlog = (req, res, next) => {
             data:result
         })
     })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({
-            error:err
-        })
-    })
+    
 }
 
 exports.getBlog = (req, res, next) => {
@@ -116,10 +106,5 @@ exports.getAllCustomer = (req, res, next) => {
             data:result
         })
     })
-    .catch(err => {
-        console.log(err);
-        res.json({
-            error:err
-        })
-    })
+    
 }
