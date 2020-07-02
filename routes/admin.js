@@ -14,7 +14,7 @@ router.get('/gallery', getGallery);
 
 //blog
 router.post('/blog', insertBlog);
-router.get('blog', getBlog);
+router.get('/blog', getBlog);
  
 
 //Customer

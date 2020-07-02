@@ -57,6 +57,9 @@ exports.insertBlog = (req, res, next) => {
             data:result
         })
     })
+    .catch(err => {
+        console.log(err)
+    })
     
 }
 
