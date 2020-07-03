@@ -79,8 +79,8 @@ exports.getBlog = (req, res, next) => {
 }
 
 exports.getBlogById = (req, res, next) => {
-    const id = req.params.id;
-    Blog.findById(id)
+    const _id = req.params._id;
+    Blog.findById(_id)
     .then(result => {
         res.status(200).json({
             data:result
