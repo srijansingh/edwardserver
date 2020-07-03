@@ -78,6 +78,22 @@ exports.getBlog = (req, res, next) => {
     })
 }
 
+exports.getBlogById = (req, res, next) => {
+    const id = req.params.id;
+    Blog.findById(id)
+    .then(result => {
+        res.status(200).json({
+            data:result
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.json({
+            error:err
+        })
+    })
+}
+
 
 //Customer
 
