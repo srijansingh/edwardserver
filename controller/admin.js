@@ -38,6 +38,24 @@ exports.getGallery = (req, res, next) => {
 }
 
 
+exports.deleteGalleryById = (req,res,next) => {
+    const _id = req.params._id;
+    Gallery.findByIdAndRemove(_id)
+    .then(result => {
+        res.status(200).json({
+            data:'Deleted successfully'
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.json({
+            error:err
+        })
+    })
+}
+
+
+//Blog
 exports.insertBlog = (req, res, next) => {
     const category = req.body.category;
     const title = req.body.title;
