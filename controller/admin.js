@@ -94,6 +94,21 @@ exports.getBlogById = (req, res, next) => {
     })
 }
 
+exports.deleteBlogById = (req,res,next) => {
+    const _id = req.params._id;
+    Blog.findByIdAndRemove(_id)
+    .then(result => {
+        res.status(200).json({
+            data:'Deleted successfully'
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.json({
+            error:err
+        })
+    })
+}
 
 //Customer
 

@@ -2,7 +2,7 @@
 const express = require('express');
 const {
     insertGallery,getGallery,
-    insertBlog,getBlog,getBlogById,
+    insertBlog,getBlog,getBlogById,deleteBlogById,
     insertCustomer,getAllCustomer
 } = require('../controller/admin');
 
@@ -16,7 +16,7 @@ router.get('/gallery', getGallery);
 router.post('/blog', insertBlog);
 router.get('/blog', getBlog);
 router.get('/blog/:_id', getBlogById);
- 
+router.delete('/blog/:_id', deleteBlogById);
 
 //Customer
 router.post('/customer', insertCustomer);
